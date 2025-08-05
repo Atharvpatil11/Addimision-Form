@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <style>
+      body {
+        background-color: #dfdcc9;
+        font-family: Arial, sans-serif;
+        margin: 5px 200px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-heading {
+        /* border: 2px solid red; */
+        color: #624d00;
+        text-decoration: underline;
+        /* width: 200px; */
+        font-style: italic;
+        margin: 5px 20px;
+        text-align: center;
+      }
+
+      .main-heading h1 {
+        /* outline: 2px solid black; */
+        background-color: rgba(206, 134, 0, 0.534);
+        /* height: 40px; */
+        padding: 10px;
+        border-radius: 20px;
+      }
+      form {
+        background-color: #cca92c;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      h2 {
+        color: #6c5300;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: rgb(44, 19, 118);
+      }
+
+      input[type="text"],
+      input[type="date"],
+      input[type="email"],
+      input[type="tel"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="radio"] {
+        margin-right: 5px;
+        /* display: flex;
+            flex-direction: column; */
+      }
+
+      hr {
+        margin: 20px 0;
+      }
+
+      .submit-button {
+        background-color: #6c5300;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-heading">
+      <h1>Registration</h1>
+    </div>
+
+    <form
+      id="admissionForm"
+      
+      method="post"
+      onsubmit="return validateForm();"
+    >
+      <h2>1. Personal Information</h2>
+
+      <label for="sectiona">
+        Student Name
+        <input
+          type="text"
+          placeholder="Enter your name"
+          name="section"
+          id="sectiona"
+          required
+        />
+      </label>
+
+      <label for="gender">
+        male
+        <input type="radio" value="gender" name="section" id="male" required />
+        female
+        <input
+          type="radio"
+          value="gender"
+          name="section"
+          id="female"
+          required
+        />
+        Other
+        <input
+          type="radio"
+          value="gender"
+          name="section"
+          id="female"
+          required
+        />
+      </label>
+
+      <label for="parent name">
+        Parent Name
+        <input
+          type="text"
+          placeholder="Enter your father's name"
+          name="parent name"
+          id="parent name"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Enter your mother's name"
+          name="parent name"
+          id="parent name"
+          required
+        />
+      </label>
+
+      <label for="maratial status">
+        Marital Status
+        <select name="maratial status" id="maratial status">
+          <option value="single">Single</option>
+          <option value="married">Married</option>
+          <option value="divorced">Divorced</option>
+          <option value="widowed">Widowed</option>
+        </select>
+      </label>
+
+      <label for="dob">
+        Student birth date
+        <input
+          type="date"
+          value="Enter your D-O-B"
+          name="section"
+          id="dob"
+          required
+        />
+      </label>
+
+      <label for="place of birth">
+        Place of Birth
+        <input
+          type="text"
+          placeholder="Enter your place of birth"
+          name="section"
+          id="place of birth"
+          required
+        />
+      </label>
+
+      <label for="blood group">
+        Blood Group
+        <select name="blood group" id="blood group">
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
+      </label>
+      <h2>2. Address</h2>
+      Address
+      <textarea
+        name="fill"
+        id="fill"
+        placeholder="fill the description"
+        rows="3"
+        cols="70"
+        required
+      ></textarea>
+      <label for="state">
+        State
+        <input
+          type="text"
+          placeholder="Enter your state"
+          name="state"
+          id="state"
+          required
+        />
+      </label>
+
+      <label for="district">
+        District
+        <input
+          type="text"
+          placeholder="Enter your district"
+          name="district"
+          id="district"
+          required
+        />
+      </label>
+
+      <label for="city">
+        City
+        <input
+          type="text"
+          placeholder="Enter your city"
+          name="city"
+          id="city"
+          required
+        />
+      </label>
+
+      <label for="country">
+        Country
+        <input
+          type="text"
+          placeholder="Enter your country"
+          name="country"
+          id="country"
+          required
+        />
+      </label>
+
+      <label for="pincode">
+        Pincode
+        <input
+          type="number"
+          placeholder="Enter your pincode"
+          name="pincode"
+          id="pincode"
+          required
+        />
+      </label>
+
+      <h2>3. Contact Information</h2>
+
+      <label for="emaila">
+        Student email
+        <input
+          type="email"
+          placeholder="Enter your email"
+          name="email"
+          id="emaila"
+          required
+        />
+      </label>
+
+      <label for="phone">
+        Student Phone
+        <input
+          type="tel"
+          placeholder="Enter your phone number"
+          name="phone"
+          id="phone"
+          required
+        />
+        Parent Phone
+        <input
+          type="tel"
+          placeholder="Enter your phone number"
+          name="phone"
+          id="phone"
+          required
+        />
+      </label>
+
+     <input type="submit" class="submit-button" value="Submit">
+
+    </form>
+  </body>
+   <script>
+    function validateForm() {
+      const name = document.getElementById("studentName").value.trim();
+      const dob = document.getElementById("dob").value;
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const genderSelected = document.querySelector('input[name="gender"]:checked');
+
+      if (!name || !dob || !email || !phone || !genderSelected) {
+        alert("Please fill all required fields.");
+        return false;
+      }
+
+      // ✅ All validations passed — redirect manually
+      window.location.href = "index.html";  // Change this to your success page
+      return false; // prevent default form submission
+    }
+  </script>
+
+</html>
